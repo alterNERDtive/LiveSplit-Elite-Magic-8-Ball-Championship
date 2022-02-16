@@ -7,6 +7,9 @@ https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-mag
 Don’t know what [“LiveSplit”](https://livesplit.org) is? It allows you to time
 speedruns of your favourite games!
 
+You are organizing one of the Magic 8-Ball races and want yours to be added to
+the collection? Just ask.
+
 ## Setup
 
 1. Download LiveSplit from https://livesplit.org/downloads/ and unzip it to a
