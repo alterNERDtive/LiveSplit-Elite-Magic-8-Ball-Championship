@@ -21,6 +21,9 @@ startup {
 	vars.stopWatch = new System.Diagnostics.Stopwatch();
 	vars.timeLimit = new System.TimeSpan(0, 20, 0); // 20 minutes
 
+	// Since there is no technical “last split”, we need some way to stop the timer when the time is up
+	vars.finished = false;
+
 	// Initialize docking counter
 	vars.dockingCounter = 0;
 }
@@ -63,6 +66,7 @@ start {
 
 	if (vars.journalEntries["start"].Match(current.journalString).Success) {
 		start = true;
+		vars.finished = false;
 		vars.dockingCounter = 0;
 		vars.stopWatch = System.Diagnostics.Stopwatch.StartNew();
 	}
@@ -81,6 +85,9 @@ split {
 			if (match.Groups["station"].Value == vars.stations[vars.dockingCounter % vars.stations.Count]) {
 				split = true;
 				vars.dockingCounter++;
+				if (vars.stopWatch.Elapsed > vars.timeLimit) {
+					vars.finished = true;
+				}
 			}
 		}
 	}
@@ -88,7 +95,8 @@ split {
 	return split;
 }
 
-// Executes every `update`. Triggers a reset if a dock at Garden Ring is detected after the 20 minute time limit has run out.
+// Executes every `update`. Triggers a reset if a dock at Garden Ring is detected after the 20 minute time limit has
+// run out.
 // See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#automatic-resets-1
 reset {
 	bool reset = false;
@@ -107,11 +115,11 @@ reset {
 	return reset;
 }
 
-// This one is technically used to stop the timer while a game is loading; we can abuse this to stop the timer after the time limit
-// has been passed.
+// This one is technically used to pause the timer while a game is loading; we can abuse this to stop the timer after
+// the time limit has been passed.
 // See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/5efb4201b86e4cba0f0e10e096f6049b947c6ff5/README.md#load-time-removal
 isLoading {
-	return vars.stopWatch.Elapsed >= vars.timeLimit;
+	return vars.finished;
 }
 
 // Executes when the game process is shut down.
@@ -122,7 +130,6 @@ exit {
 }
 
 // Executes when LiveScript shuts the auto splitter down, e.g. on reloading it.
-// In our case we need to close the StreamWriter for the auto splitter’s log file.
 // When reloading the splitter with the game running, LiveSplit does **not** execute `exit`, but it does execute `shutdown`.
 // see https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#script-shutdown
 shutdown {
