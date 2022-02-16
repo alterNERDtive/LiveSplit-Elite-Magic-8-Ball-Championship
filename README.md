@@ -37,6 +37,6 @@ The AutoSplitter will start the timer once you undock from Garden Ring. It will
 enforce docking at the race’s stations in the correct order. After 20 minutes,
 the timer will stop and reset once you dock back at Garden Ring.
 
-**Note**: If you are _are docked at Garden Ring_ when the time limit is reached,
-you will either have to reset LiveSplit manually or re-dock to have the
-AutoSplitter reset it for you.
+**Note**: If your _next stop is Garden Ring_ when the time limit is reached,
+you will either have to reset LiveSplit manually after docking there or re-dock
+to have the AutoSplitter reset it for you.

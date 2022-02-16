@@ -104,7 +104,10 @@ reset {
 	if (vars.stopWatch.Elapsed > vars.timeLimit && !String.IsNullOrEmpty(current.journalString)) {
 		System.Text.RegularExpressions.Match match = vars.journalEntries["docked"].Match(current.journalString);
 		if (match.Success) {
-			if (match.Groups["station"].Value == "Garden Ring") {
+			// Since you can do one last dock after the time limit has been reached, we can _not_ reset on docking at
+			// Garden Ring if that is the next stop in your current lap. Otherwise `split` is not executed.
+			if (match.Groups["station"].Value == "Garden Ring"
+				&& vars.stations[vars.dockingCounter % vars.stations.Count] != "Garden Ring") {
 				reset = true;
 				vars.dockingCounter = 0;
 				vars.stopWatch.Reset();
