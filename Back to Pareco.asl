@@ -64,7 +64,7 @@ start {
 	if (vars.journalEntries["start"].Match(current.journalString).Success) {
 		start = true;
 		vars.dockingCounter = 0;
-		vars.stopWatch.StartNew();
+		vars.stopWatch = System.Diagnostics.Stopwatch.StartNew();
 	}
 
 	return start;
