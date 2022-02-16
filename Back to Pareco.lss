@@ -54,7 +54,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>{Lap 1}Neville Ring</Name>
+      <Name>-Neville Ring</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -63,61 +63,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>-Garden Ring</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime />
-      <SegmentHistory />
-    </Segment>
-    <Segment>
-      <Name>-Crown Orbital</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime />
-      <SegmentHistory />
-    </Segment>
-    <Segment>
-      <Name>-Asire Dock</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime />
-      <SegmentHistory />
-    </Segment>
-    <Segment>
-      <Name>-Webb Station</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime />
-      <SegmentHistory />
-    </Segment>
-    <Segment>
-      <Name>-Phillips Market</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime />
-      <SegmentHistory />
-    </Segment>
-    <Segment>
-      <Name>{Lap 2}Neville Ring</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime />
-      <SegmentHistory />
-    </Segment>
-    <Segment>
-      <Name>-Garden Ring</Name>
+      <Name>{Lap 1}Garden Ring</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -162,7 +108,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>{Lap 3} Neville  Ring</Name>
+      <Name>-Neville Ring</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -171,7 +117,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>-Garden Ring</Name>
+      <Name>{Lap 2}Garden Ring</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -216,7 +162,70 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>{Lap 4} Neville Ring</Name>
+      <Name> Neville Ring</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>{Lap 3}Garden Ring</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Crown Orbital</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Asire Dock</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Webb Station</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Phillips Market</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Neville Ring</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>{Lap 4}Garden Ring</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
