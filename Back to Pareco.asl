@@ -1,0 +1,132 @@
+// Defines the process to monitor. We are not reading anything from the game’s memory, so it’s empty.
+// We still need it though, LiveSplit will only run the auto splitter if the corresponding process is present.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#state-descriptors
+state("EliteDangerous64") {}
+
+// Executes when LiveSplit (re-)loads the auto splitter. Does general setup tasks.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#script-startup
+startup {
+	// Relevant journal entries
+	vars.journalReader = null;
+	vars.journalEntries = new Dictionary<string, System.Text.RegularExpressions.Regex>();
+	vars.journalEntries["start"] =
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""Garden Ring"", ""StationType"":"".*"", ""MarketID"":\d+ \}");
+	vars.journalEntries["docked"] =
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""(?<station>.*)"", ""StationType"":"".*"", ""StarSystem"":""Pareco"", .*\}");
+
+	// List of stations in a lap
+	vars.stations = (new string[] { "Crown Orbital", "Asire Dock", "Webb Station", "Phillips Market", "Neville Ring", "Garden Ring" }).ToList();
+
+	// Stopwatch for keeping track of the elapsed time; time limit is 20 minutes
+	vars.stopWatch = new System.Diagnostics.Stopwatch();
+	vars.timeLimit = new System.TimeSpan(0, 20, 0); // 20 minutes
+
+	// Initialize docking counter
+	vars.dockingCounter = 0;
+}
+
+// Executes when LiveSplit detects the game process (see “state” at the top of the file).
+// In our case the journal and netlog files are unique to every execution of the game, so we need to prepare them here.
+// We also need to check if file logging is enabled (the setting is not available in `startup`) and create/open our log file.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#script-initialization-game-start
+init {
+	string journalPath = Path.Combine(
+		Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+		"Saved Games",
+		"Frontier Developments",
+		"Elite Dangerous"
+		);
+
+	// Elite doesn’t write the Journal file to disk right away, so we’re just waiting a couple.
+	// Unfortunately this will lock the LiveSplit window for the entire 15s.
+	// See https://github.com/Astyrrean/LiveSplit_files_for_AX/issues/4
+	int delay = 15;
+	Thread.Sleep(delay*1000);
+
+	// Grab latest journal file
+	FileInfo journalFile = new DirectoryInfo(journalPath).GetFiles("journal.*.log").OrderByDescending(file => file.Name).First();
+	vars.journalReader = new StreamReader(new FileStream(journalFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+	vars.journalReader.ReadToEnd();
+}
+
+// Executes as long as the game process is running, by default 60 times per second.
+// Unless explicitly returning `false`, `start`, `split` and `reset` are executed right after.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#generic-update
+update {
+	current.journalString = vars.journalReader.ReadToEnd();
+}
+
+// Executes every `update`. Starts the timer if undocking from Garden Ring is detected.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#automatic-timer-start-1
+start {
+	bool start = false;
+
+	if (vars.journalEntries["start"].Match(current.journalString).Success) {
+		start = true;
+		vars.dockingCounter = 0;
+		vars.stopWatch.StartNew();
+	}
+
+	return start;
+}
+
+// Executes every `update`. Triggers a split if docking at the next station in the current lap is detected.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#automatic-splits-1
+split {
+	bool split = false;
+	
+	if (!String.IsNullOrEmpty(current.journalString)) {
+		System.Text.RegularExpressions.Match match = vars.journalEntries["docked"].Match(current.journalString);
+		if (match.Success) {
+			if (match.Groups["station"].Value == vars.stations[vars.dockingCounter % vars.stations.Count]) {
+				split = true;
+				vars.dockingCounter++;
+			}
+		}
+	}
+
+	return split;
+}
+
+// Executes every `update`. Triggers a reset if a dock at Garden Ring is detected after the 20 minute time limit has run out.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#automatic-resets-1
+reset {
+	bool reset = false;
+
+	if (vars.stopWatch.Elapsed > vars.timeLimit && !String.IsNullOrEmpty(current.journalString)) {
+		System.Text.RegularExpressions.Match match = vars.journalEntries["docked"].Match(current.journalString);
+		if (match.Success) {
+			if (match.Groups["station"].Value == "Garden Ring") {
+				reset = true;
+				vars.dockingCounter = 0;
+				vars.stopWatch.Reset();
+			}
+		}
+	}
+
+	return reset;
+}
+
+// This one is technically used to stop the timer while a game is loading; we can abuse this to stop the timer after the time limit
+// has been passed.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/5efb4201b86e4cba0f0e10e096f6049b947c6ff5/README.md#load-time-removal
+isLoading {
+	return vars.stopWatch.Elapsed >= vars.timeLimit;
+}
+
+// Executes when the game process is shut down.
+// In our case we’re going to close the files we opened in `init`.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#game-exit
+exit {
+	vars.journalReader.Close();
+}
+
+// Executes when LiveScript shuts the auto splitter down, e.g. on reloading it.
+// In our case we need to close the StreamWriter for the auto splitter’s log file.
+// When reloading the splitter with the game running, LiveSplit does **not** execute `exit`, but it does execute `shutdown`.
+// see https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#script-shutdown
+shutdown {
+	if (vars.journalReader != null) {
+		vars.journalReader.Close();
+	}
+}
