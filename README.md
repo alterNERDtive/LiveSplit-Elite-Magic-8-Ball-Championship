@@ -34,8 +34,8 @@ written a journal file.
 https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-back-to-pareco-magic-8-ball-championship-race-1.598760/
 
 The AutoSplitter will start the timer once you undock from Garden Ring. It will
-enforce docking at the race’s stations in the correct order. After 20 minutes,
-you get one last stop, then the timer will stop and reset once you dock back at
+enforce docking at the race’s stations in the correct order. After 20 minutes
+you get one last stop, then the timer will pause and reset once you dock back at
 Garden Ring.
 
 There are two settings:
@@ -44,7 +44,7 @@ There are two settings:
   that. You can find the file in `%AppData%`, the full path will be in the
   tooltip. Disabled by default.
 * `Automatically reset when docking back at Garden Ring`: Automatically reset
-  when you have finished a run and dock back at Garden ring. Enabled by default.
+  when you have finished a run and dock back at Garden Ring. Enabled by default.
 
 **Note**: If your _next stop is Garden Ring_ when the time limit is reached,
 you will either have to reset LiveSplit manually after docking there or re-dock
