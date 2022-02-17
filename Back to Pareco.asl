@@ -10,9 +10,9 @@ startup {
 	vars.journalReader = null;
 	vars.journalEntries = new Dictionary<string, System.Text.RegularExpressions.Regex>();
 	vars.journalEntries["start"] =
-		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""Garden Ring"", ""StationType"":"".*"", ""MarketID"":\d+ \}");
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""Garden Ring"", ""StationType"":"".*"", ""MarketID"":.* \}");
 	vars.journalEntries["docked"] =
-		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""(?<station>.*)"", ""StationType"":"".*"", ""StarSystem"":""Pareco"", .*\}");
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""(?<station>.*)"", ""StationType"":"".*"", (""Taxi"":.*, )?""StarSystem"":""Pareco"", .*\}");
 
 	// List of stations in a lap
 	vars.stations = (new string[] { "Crown Orbital", "Asire Dock", "Webb Station", "Phillips Market", "Neville Ring", "Garden Ring" }).ToList();
