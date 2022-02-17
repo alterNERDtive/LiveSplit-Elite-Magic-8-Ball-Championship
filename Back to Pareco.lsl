@@ -181,5 +181,10 @@
         <TimeSaveAccuracy>Tenths</TimeSaveAccuracy>
       </Settings>
     </Component>
+    <Component>
+      <Path>LiveSplit.ScriptableAutoSplit.dll</Path>
+      <Settings>
+      </Settings>
+    </Component>
   </Components>
 </Layout>
