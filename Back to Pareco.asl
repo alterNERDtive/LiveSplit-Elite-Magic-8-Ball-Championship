@@ -24,8 +24,26 @@ startup {
 	// Since there is no technical “last split”, we need some way to stop the timer when the time is up
 	vars.finished = false;
 
-	// Initialize docking counter
-	vars.dockingCounter = 0;
+	// Initialize stops counter
+	vars.stops = 0;
+
+	// Initialize docking counter file
+	vars.logFile = new FileInfo(Path.Combine(
+			Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+			"LiveSplit",
+			"Magic 8-Ball",
+			"Back to Pareco",
+			"stops.txt")
+		);
+	vars.writeStops = (Action)delegate () {
+		Directory.CreateDirectory(vars.logFile.Directory.FullName);
+		File.WriteAllText(vars.logFile.FullName, vars.stops.ToString());
+	};
+
+	// Initialize settings
+	settings.Add("writeStops", false, "Write the number of stops to a file, e.g. for a stream overlay");
+	settings.SetToolTip("writeStops", "You will find the file at " + vars.logFile.FullName);
+	settings.Add("autoReset", true, "Automatically reset when docking back at Garden Ring");
 }
 
 // Executes when LiveSplit detects the game process (see “state” at the top of the file).
@@ -39,6 +57,7 @@ init {
 		"Frontier Developments",
 		"Elite Dangerous"
 		);
+	vars.writeStops();
 
 	// Elite doesn’t write the Journal file to disk right away, so we’re just waiting a couple.
 	// Unfortunately this will lock the LiveSplit window for the entire 15s.
@@ -67,7 +86,11 @@ start {
 	if (vars.journalEntries["start"].Match(current.journalString).Success) {
 		start = true;
 		vars.finished = false;
-		vars.dockingCounter = 0;
+		vars.stops = 0;
+		if (settings["writeStops"]) {
+			vars.writeStops();
+		}
+		
 		vars.stopWatch = System.Diagnostics.Stopwatch.StartNew();
 	}
 
@@ -82,9 +105,12 @@ split {
 	if (!String.IsNullOrEmpty(current.journalString)) {
 		System.Text.RegularExpressions.Match match = vars.journalEntries["docked"].Match(current.journalString);
 		if (match.Success) {
-			if (match.Groups["station"].Value == vars.stations[vars.dockingCounter % vars.stations.Count]) {
+			if (match.Groups["station"].Value == vars.stations[vars.stops % vars.stations.Count]) {
 				split = true;
-				vars.dockingCounter++;
+				vars.stops++;
+				if (settings["writeStops"]) {
+					vars.writeStops();
+				}
 				if (vars.stopWatch.Elapsed > vars.timeLimit) {
 					vars.finished = true;
 				}
@@ -101,15 +127,19 @@ split {
 reset {
 	bool reset = false;
 
-	if (vars.stopWatch.Elapsed > vars.timeLimit && !String.IsNullOrEmpty(current.journalString)) {
+	if (vars.finished && settings["autoReset"]
+		&& vars.stopWatch.Elapsed > vars.timeLimit && !String.IsNullOrEmpty(current.journalString)) {
 		System.Text.RegularExpressions.Match match = vars.journalEntries["docked"].Match(current.journalString);
 		if (match.Success) {
 			// Since you can do one last dock after the time limit has been reached, we can _not_ reset on docking at
 			// Garden Ring if that is the next stop in your current lap. Otherwise `split` is not executed.
 			if (match.Groups["station"].Value == "Garden Ring"
-				&& vars.stations[vars.dockingCounter % vars.stations.Count] != "Garden Ring") {
+				&& vars.stations[vars.stops % vars.stations.Count] != "Garden Ring") {
 				reset = true;
-				vars.dockingCounter = 0;
+				vars.stops = 0;
+				if (settings["writeStops"]) {
+					vars.writeStops();
+				}
 				vars.stopWatch.Reset();
 			}
 		}

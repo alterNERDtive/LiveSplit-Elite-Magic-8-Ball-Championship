@@ -38,6 +38,14 @@ enforce docking at the race’s stations in the correct order. After 20 minutes,
 you get one last stop, then the timer will stop and reset once you dock back at
 Garden Ring.
 
+There are two settings:
+
+* `Write the number of stops to a file, e.g. for a stream overlay`: Does exactly
+  that. You can find the file in `%AppData%`, the full path will be in the
+  tooltip. Disabled by default.
+* `Automatically reset when docking back at Garden Ring`: Automatically reset
+  when you have finished a run and dock back at Garden ring. Enabled by default.
+
 **Note**: If your _next stop is Garden Ring_ when the time limit is reached,
 you will either have to reset LiveSplit manually after docking there or re-dock
 to have the AutoSplitter reset it for you.
