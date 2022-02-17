@@ -57,7 +57,6 @@ init {
 		"Frontier Developments",
 		"Elite Dangerous"
 		);
-	vars.writeStops();
 
 	// Elite doesn’t write the Journal file to disk right away, so we’re just waiting a couple.
 	// Unfortunately this will lock the LiveSplit window for the entire 15s.
