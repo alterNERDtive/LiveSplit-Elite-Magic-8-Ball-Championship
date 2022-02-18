@@ -29,7 +29,7 @@ startup {
 
 	// Initialize docking counter file
 	vars.logFile = new FileInfo(Path.Combine(
-			Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+			Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
 			"LiveSplit",
 			"Magic 8-Ball",
 			"Back to Pareco",
