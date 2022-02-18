@@ -175,7 +175,7 @@
         <BackgroundGradient>Vertical</BackgroundGradient>
         <DeltaAccuracy>Seconds</DeltaAccuracy>
         <DropDecimals>True</DropDecimals>
-        <Comparison>Current Comparison</Comparison>
+        <Comparison>Game Time</Comparison>
         <Display2Rows>False</Display2Rows>
         <ShowPossibleTimeSave>False</ShowPossibleTimeSave>
         <TimeSaveAccuracy>Tenths</TimeSaveAccuracy>
