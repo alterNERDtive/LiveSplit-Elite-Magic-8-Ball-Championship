@@ -45,6 +45,8 @@ There are two settings:
   tooltip. Disabled by default.
 * `Automatically reset when docking back at Garden Ring`: Automatically reset
   when you have finished a run and dock back at Garden Ring. Enabled by default.
+* `Automatically stop the timer after death`: Automatically stop the timer
+  should you meet an untimely demise. Disabled by default.
 
 **Note**: If your _next stop is Garden Ring_ when the time limit is reached,
 you will either have to reset LiveSplit manually after docking there or re-dock

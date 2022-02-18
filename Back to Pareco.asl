@@ -13,6 +13,8 @@ startup {
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""Garden Ring"", ""StationType"":"".*"", ""MarketID"":\d+(, ""Taxi"":(true|false), ""Multicrew"":(true|false))? \}");
 	vars.journalEntries["docked"] =
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""(?<station>.*)"", ""StationType"":"".*""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Pareco"", .*\}");
+	vars.journalEntries["died"] =
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Died"" .*\}");
 
 	// List of stations in a lap
 	vars.stations = (new string[] { "Crown Orbital", "Asire Dock", "Webb Station", "Phillips Market", "Neville Ring", "Garden Ring" }).ToList();
@@ -44,6 +46,8 @@ startup {
 	settings.Add("writeStops", false, "Write the number of stops to a file, e.g. for a stream overlay");
 	settings.SetToolTip("writeStops", "You will find the file at " + vars.logFile.FullName);
 	settings.Add("autoReset", true, "Automatically reset when docking back at Garden Ring");
+	settings.Add("resetOnDeath", false, "Automatically stop the timer after death");
+	settings.SetToolTip("resetOnDeath", "Will also reset once you dock at Garden Ring afterwards if auto reset is enabled");
 }
 
 // Executes when LiveSplit detects the game process (see “state” at the top of the file).
@@ -75,6 +79,10 @@ init {
 // See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#generic-update
 update {
 	current.journalString = vars.journalReader.ReadToEnd();
+	if (settings["resetOnDeath"] && !String.IsNullOrEmpty(current.journalString)
+		&& vars.journalEntries["died"].Match(current.journalString).Success) {
+		vars.finished = true;
+	}
 }
 
 // Executes every `update`. Starts the timer if undocking from Garden Ring is detected.
@@ -126,8 +134,7 @@ split {
 reset {
 	bool reset = false;
 
-	if (vars.finished && settings["autoReset"]
-		&& vars.stopWatch.Elapsed > vars.timeLimit && !String.IsNullOrEmpty(current.journalString)) {
+	if (vars.finished && settings["autoReset"] && !String.IsNullOrEmpty(current.journalString)) {
 		System.Text.RegularExpressions.Match match = vars.journalEntries["docked"].Match(current.journalString);
 		if (match.Success) {
 			// Since you can do one last dock after the time limit has been reached, we can _not_ reset on docking at
