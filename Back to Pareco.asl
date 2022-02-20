@@ -16,6 +16,32 @@ startup {
 	vars.journalEntries["died"] =
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Died"" .*\}");
 
+	// Journal file handling
+	vars.journalPath = Path.Combine(
+		Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+		"Saved Games",
+		"Frontier Developments",
+		"Elite Dangerous"
+		);
+	vars.currentJournal = "none";
+	vars.updateJournalReader = (Action)delegate() {
+		FileInfo journalFile = new DirectoryInfo(vars.journalPath).GetFiles("journal.*.log").OrderByDescending(file => file.Name).First();
+		print("Current journal file: " + vars.currentJournal + ", latest journal file: " + journalFile.Name);
+		if (journalFile.Name != vars.currentJournal) {
+			vars.journalReader = new StreamReader(new FileStream(journalFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+			vars.currentJournal = journalFile.Name;
+		}
+	};
+	vars.updateJournalReader();
+	vars.journalReader.ReadToEnd();
+
+	// Watch for new files
+	FileSystemWatcher journalWatcher = new FileSystemWatcher(vars.journalPath);
+	journalWatcher.Created += (object sender, FileSystemEventArgs eventArgs) => {
+		vars.updateJournalReader();
+	};
+	journalWatcher.EnableRaisingEvents = true;
+
 	// List of stations in a lap
 	vars.stations = (new string[] { "Crown Orbital", "Asire Dock", "Webb Station", "Phillips Market", "Neville Ring", "Garden Ring" }).ToList();
 
@@ -55,23 +81,6 @@ startup {
 // We also need to check if file logging is enabled (the setting is not available in `startup`) and create/open our log file.
 // See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#script-initialization-game-start
 init {
-	string journalPath = Path.Combine(
-		Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-		"Saved Games",
-		"Frontier Developments",
-		"Elite Dangerous"
-		);
-
-	// Elite doesn’t write the Journal file to disk right away, so we’re just waiting a couple.
-	// Unfortunately this will lock the LiveSplit window for the entire 15s.
-	// See https://github.com/Astyrrean/LiveSplit_files_for_AX/issues/4
-	int delay = 15;
-	Thread.Sleep(delay*1000);
-
-	// Grab latest journal file
-	FileInfo journalFile = new DirectoryInfo(journalPath).GetFiles("journal.*.log").OrderByDescending(file => file.Name).First();
-	vars.journalReader = new StreamReader(new FileStream(journalFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
-	vars.journalReader.ReadToEnd();
 }
 
 // Executes as long as the game process is running, by default 60 times per second.

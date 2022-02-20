@@ -22,11 +22,6 @@ the collection? Just ask.
    - Right click, Edit Layout, Layout Settings, then in “Scriptable Auto
      Splitter”, set `[name of the race].asl` as the script path.
 
-**Note**: When the game is loaded with LiveSplit running, or when you start
-LiveSplit while the game is up, LiveSplit will lock up for 15 seconds and not
-respond. This is because it has to wait until it can be sure that the game has
-written a journal file.
-
 ## Races
 
 ### Back to Pareco

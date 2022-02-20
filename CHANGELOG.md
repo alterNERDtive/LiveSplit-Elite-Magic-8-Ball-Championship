@@ -1,3 +1,11 @@
+# devel
+
+## Fixed
+
+* No longer freezes for 15s on `init`. Instead watches the journal folder for
+  new journal files and loads the latest one automatically. Should fix some
+  edge cases too.
+
 # 1.1 (2022-02-18)
 
 Many improvements and fixes.
