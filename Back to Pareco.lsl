@@ -134,14 +134,14 @@
             <Name>+/-</Name>
             <Type>Delta</Type>
             <Comparison>Personal Best</Comparison>
-            <TimingMethod>Game Time</TimingMethod>
+            <TimingMethod>Real Time</TimingMethod>
           </Settings>
           <Settings>
             <Version>1.5</Version>
             <Name>Time</Name>
             <Type>SplitTime</Type>
             <Comparison>Personal Best</Comparison>
-            <TimingMethod>Game Time</TimingMethod>
+            <TimingMethod>Real Time</TimingMethod>
           </Settings>
         </Columns>
       </Settings>
@@ -175,7 +175,7 @@
         <BackgroundGradient>Vertical</BackgroundGradient>
         <DeltaAccuracy>Seconds</DeltaAccuracy>
         <DropDecimals>True</DropDecimals>
-        <Comparison>Game Time</Comparison>
+        <Comparison>Personal Best</Comparison>
         <Display2Rows>False</Display2Rows>
         <ShowPossibleTimeSave>False</ShowPossibleTimeSave>
         <TimeSaveAccuracy>Tenths</TimeSaveAccuracy>
