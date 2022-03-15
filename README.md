@@ -24,7 +24,7 @@ the collection? Just ask.
 
 ## Races
 
-### Back to Pareco
+### Race 1 – Back to Pareco
 
 https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-back-to-pareco-magic-8-ball-championship-race-1.598760/
 
@@ -46,3 +46,17 @@ There are two settings:
 **Note**: If your _next stop is Garden Ring_ when the time limit is reached,
 you will either have to reset LiveSplit manually after docking there or re-dock
 to have the AutoSplitter reset it for you.
+
+### Race 2 – The Aquarian Job
+
+https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-aquarian-job-magic-8-ball-championship-race-2.599829/
+
+The AutoSplitter will start the timer once you undock from London Relay. It will
+enforce doing all steps in the corret order. There is no sane way to check for
+the distance requirements around Cooper Arena; as long as you land/take off
+within ~50 km of the settlement, you will get a split.
+
+There is one settings:
+
+* `Automatically reset when refuelling or repairing`: Automatically reset when
+  you Refuel or repair, since that is against the rules. Disabled by default.
