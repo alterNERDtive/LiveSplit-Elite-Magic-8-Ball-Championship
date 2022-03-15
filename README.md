@@ -16,11 +16,17 @@ the collection? Just ask.
    directory of your choosing.
 2. Download this repository (green button in the top right of the repostory
    view → “Download ZIP”) and extract it to a directory of your choosing.
+   Alternatively, clone the git repository.
 3. Launch LiveSplit and do the following:
    - Right click, Open Splits, select `[name of the race].lss`.
    - Right click, Open Layout, select `[name of the race].lsl`.
    - Right click, Edit Layout, Layout Settings, then in “Scriptable Auto
      Splitter”, set `[name of the race].asl` as the script path.
+4. Right click, Save Layout As…, save to wherever. This means your changes in
+  the layout (e.g. changing colours) and associating the auto splitter will not
+  be lost on updates.
+5. Right click, Save Splits As…, save to wherever. This ensures that your
+  personal times will not be lost on updates.
 
 ## Races
 
