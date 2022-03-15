@@ -1,15 +1,14 @@
-# devel
+# 1.2 (2022-03-15)
 
 ## Added
 
-* Support for race #2, The Aquarian Job
+* Support for race 2, The Aquarian Job
 
 ## Fixed
 
 * No longer freezes for 15s on `init`. Instead watches the journal folder for
   new journal files and loads the latest one automatically. Should fix some
   edge cases too.
-* Back to Pareco: now defaults to compare Game Time against Personal Best
 
 # 1.1 (2022-02-18)
 
