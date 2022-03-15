@@ -36,7 +36,7 @@ Garden Ring.
 There are two settings:
 
 * `Write the number of stops to a file, e.g. for a stream overlay`: Does exactly
-  that. You can find the file in `%AppData%`, the full path will be in the
+  that. You can find the file in `My Documents`, the full path will be in the
   tooltip. Disabled by default.
 * `Automatically reset when docking back at Garden Ring`: Automatically reset
   when you have finished a run and dock back at Garden Ring. Enabled by default.
