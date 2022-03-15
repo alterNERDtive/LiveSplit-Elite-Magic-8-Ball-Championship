@@ -14,141 +14,31 @@
     <Variables />
   </Metadata>
   <Offset>00:00:00</Offset>
-  <AttemptCount>3</AttemptCount>
-  <AttemptHistory>
-    <Attempt id="1" started="03/15/2022 08:28:38" isStartedSynced="True" ended="03/15/2022 08:32:32" isEndedSynced="True">
-      <PauseTime>00:00:04.8560000</PauseTime>
-    </Attempt>
-    <Attempt id="2" started="03/15/2022 08:36:06" isStartedSynced="True" ended="03/15/2022 09:13:57" isEndedSynced="True">
-      <RealTime>00:37:51.0700000</RealTime>
-    </Attempt>
-    <Attempt id="3" started="03/15/2022 09:25:24" isStartedSynced="True" ended="03/15/2022 09:28:15" isEndedSynced="True" />
-  </AttemptHistory>
+  <AttemptCount>0</AttemptCount>
   <Segments>
     <Segment>
       <Name>-Jump to Chi Herculis</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best">
-          <RealTime>00:00:52.3760000</RealTime>
-        </SplitTime>
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:00:48.5360000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:00:48.5360000</RealTime>
-        </Time>
-        <Time id="3">
-          <RealTime>00:00:52.3760000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>{Bridger Town}Land at Bridger Town</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:10:49.7470000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:10:49.7470000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>-Jump to 241 G. Aquarii</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:03:01.2670000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:03:01.2670000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>-Land near Cooper Arena</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:16:00.2500000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:16:00.2500000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>{Cooper Arena}Scan Data Link</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:00:05.9930000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:00:05.9930000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>-Take off from Cooper Arena</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:01:34.7170000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:01:34.7170000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>-Jump to Epsilon Indi</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:02:23.2550000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:02:23.2550000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>{London Relay}Dock at London Relay</Name>
-      <Icon />
-      <SplitTimes>
-        <SplitTime name="Personal Best" />
-      </SplitTimes>
-      <BestSegmentTime>
-        <RealTime>00:03:07.3050000</RealTime>
-      </BestSegmentTime>
-      <SegmentHistory>
-        <Time id="2">
-          <RealTime>00:03:07.3050000</RealTime>
-        </Time>
-      </SegmentHistory>
     </Segment>
   </Segments>
   <AutoSplitterSettings />
