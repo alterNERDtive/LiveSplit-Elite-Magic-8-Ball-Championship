@@ -1,3 +1,15 @@
+# 2.0 (2022-03-18)
+
+## Changed
+
+* Splits for Race 2 (The Aquarian Job) now include the SC drop timing at all
+  stops.
+
+## Fixed
+
+* Auto splitters can now cope with the new file name format for journal files
+  introducd for Odyssey patch 11. (#6)
+
 # 1.2 (2022-03-15)
 
 ## Added
@@ -8,7 +20,7 @@
 
 * No longer freezes for 15s on `init`. Instead watches the journal folder for
   new journal files and loads the latest one automatically. Should fix some
-  edge cases too.
+  edge cases too. (#5)
 
 # 1.1 (2022-02-18)
 
