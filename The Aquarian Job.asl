@@ -14,9 +14,13 @@ startup {
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump"", ""StarSystem"":""Chi Herculis"", ""SystemAddress"":1522305861995, .*\}"));
 	vars.journalEntries.Add(
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit"", ""StarSystem"":""Chi Herculis"", ""SystemAddress"":1522305861995, ""Body"":""Kumay"", ""BodyID"":2, ""BodyType"":""Planet"" \}"));
+	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""Bridger Town"", ""StationType"":"".*""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Chi Herculis"", .*\}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump"", ""StarSystem"":""241 G. Aquarii"", ""SystemAddress"":2518738258283, .*\}"));
+	vars.journalEntries.Add(
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit"", ""StarSystem"":""241 G. Aquarii"", ""SystemAddress"":2518738258283, ""Body"":""241 G. Aquarii 3 d"", ""BodyID"":37, ""BodyType"":""Planet"" \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Touchdown"", ""PlayerControlled"":true, ""Latitude"":.*, ""Longitude"":.*, ""NearestDestination"":""(Cooper Arena|When Buckyballing goes badly wrong)"" \}"));
 	vars.journalEntries.Add(
@@ -25,6 +29,8 @@ startup {
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Liftoff"", ""PlayerControlled"":true, ""Latitude"":.*, ""Longitude"":.*, ""NearestDestination"":""(Cooper Arena|When Buckyballing goes badly wrong)"" \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump"", ""StarSystem"":""Epsilon Indi"", ""SystemAddress"":908486251218, .*\}"));
+	vars.journalEntries.Add(
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit"", ""StarSystem"":""Epsilon Indi"", ""SystemAddress"":908486251218, ""Body"":""London Relay"", ""BodyID"":18, ""BodyType"":""Station"" \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""London Relay"", ""StationType"":"".*""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Epsilon Indi"", .*\}"));
 

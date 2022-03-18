@@ -20,10 +20,16 @@
       <Name>-Jump to Chi Herculis</Name>
     </Segment>
     <Segment>
+      <Name>-Drop at Bridger Town</Name>
+    </Segment>
+    <Segment>
       <Name>{Bridger Town}Land at Bridger Town</Name>
     </Segment>
     <Segment>
       <Name>-Jump to 241 G. Aquarii</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Cooper Arena</Name>
     </Segment>
     <Segment>
       <Name>-Land near Cooper Arena</Name>
@@ -36,6 +42,9 @@
     </Segment>
     <Segment>
       <Name>-Jump to Epsilon Indi</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at London Relay</Name>
     </Segment>
     <Segment>
       <Name>{London Relay}Dock at London Relay</Name>
