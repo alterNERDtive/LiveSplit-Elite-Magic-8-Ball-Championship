@@ -25,7 +25,7 @@ startup {
 		);
 	vars.currentJournal = "none";
 	vars.updateJournalReader = (Action)delegate() {
-		FileInfo journalFile = new DirectoryInfo(vars.journalPath).GetFiles("journal.*.log").OrderByDescending(file => file.Name).First();
+		FileInfo journalFile = new DirectoryInfo(vars.journalPath).GetFiles("journal.*.log").OrderByDescending(file => file.LastWriteTime).First();
 		print("Current journal file: " + vars.currentJournal + ", latest journal file: " + journalFile.Name);
 		if (journalFile.Name != vars.currentJournal) {
 			vars.journalReader = new StreamReader(new FileStream(journalFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
