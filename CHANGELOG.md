@@ -8,7 +8,7 @@
 ## Fixed
 
 * Auto splitters can now cope with the new file name format for journal files
-  introducd for Odyssey patch 11. (#6)
+  introduced for Odyssey patch 11. (#6)
 
 # 1.2 (2022-03-15)
 
