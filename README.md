@@ -66,3 +66,14 @@ There is one settings:
 
 * `Automatically reset when refuelling or repairing`: Automatically reset when
   you Refuel or repair, since that is against the rules. Disabled by default.
+
+### Race 3 – Wiccan BeWare
+
+https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-wiccan-beware-race-magic-8-ball-championship-race-3.602128/
+
+The AutoSplitter will start the timer once you undock from Dublin Citadel. It
+will **not** enforce buying the correct cargo, and **not** check the system you
+buy it in. It can also not detect if/when you fly through the tunnel at Gateway
+Interchange Hub, nor enforce the speed requirement.
+
+There are no settings.

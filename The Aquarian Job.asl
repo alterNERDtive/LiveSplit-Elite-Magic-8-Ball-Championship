@@ -80,8 +80,6 @@ startup {
 }
 
 // Executes when LiveSplit detects the game process (see “state” at the top of the file).
-// In our case the journal and netlog files are unique to every execution of the game, so we need to prepare them here.
-// We also need to check if file logging is enabled (the setting is not available in `startup`) and create/open our log file.
 // See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#script-initialization-game-start
 init {
 }

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>Elite Dangerous</GameName>
+  <CategoryName>Wiccan BeWare</CategoryName>
+  <LayoutPath>
+  </LayoutPath>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <Segments>
+    <Segment>
+      <Name>-Buy Cargo</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Soholia</Name>
+    </Segment>
+    <Segment>
+      <Name>{Soholia}Sell in Soholia</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Gateway</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Dublin Citadel</Name>
+    </Segment>
+    <Segment>
+      <Name>{Dublin Citadel}Sell at Dublin Orbital</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Gateway Interchange Hub</Name>
+    </Segment>
+    <Segment>
+      <Name>{Gateway Interchange Hub}Jump out of Gateway Interchange Hub</Name>
+    </Segment>
+    <Segment>
+      <Name>-Buy Domestic Appliances</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to LP 131-66</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Vasilyev Vision</Name>
+    </Segment>
+    <Segment>
+      <Name>{Vasilyev Vision}Sell at Vasilyev Vision</Name>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>
