@@ -23,10 +23,10 @@ startup {
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Gateway"", ""SystemAddress"":2832631665362, ""Body"":""Dublin Citadel"", ""BodyID"":11, ""BodyType"":""Station"" \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""MarketSell"", ""MarketID"":128104440, ""Type"":"".*"", ""Type_Localised"":"".*"", ""Count"":\d+, ""SellPrice"":\d+, ""TotalSale"":\d+, ""AvgPricePaid"":\d+ \}"));
-		vars.journalEntries.Add(
+	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Gateway"", ""SystemAddress"":2832631665362, ""Body"":""Hope"", ""BodyID"":1, ""BodyType"":""Planet"" \}"));
 	vars.journalEntries.Add(
-		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseEntry""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Gateway"", ""SystemAddress"":2832631665362 \}"));
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""(SupercruiseEntry""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Gateway"", ""SystemAddress"":2832631665362|StartJump"", ""JumpType"":""Hyperspace"", ""StarSystem"":"".*"", ""SystemAddress"":\d+, ""StarClass"":"".*"") \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""MarketBuy"", ""MarketID"":\d+, ""Type"":"".*"", ""Type_Localised"":"".*"", ""Count"":\d+, ""BuyPrice"":\d+, ""TotalCost"":\d+ \}"));
 	vars.journalEntries.Add(
