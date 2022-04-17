@@ -1,3 +1,11 @@
+# devel
+
+## Added
+
+* Wiccan BeWare: automatic reset option for accidental refuels / repairs.
+
+-----
+
 # 3.0 (2022-04-17)
 
 ## Added

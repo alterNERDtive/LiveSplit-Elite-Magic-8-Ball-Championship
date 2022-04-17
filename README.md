@@ -76,4 +76,7 @@ will **not** enforce buying the correct cargo, and **not** check the system you
 buy it in. It can also not detect if/when you fly through the tunnel at Gateway
 Interchange Hub, nor enforce the speed requirement.
 
-There are no settings.
+There is one settings:
+
+* `Automatically reset when refuelling or repairing`: Automatically reset when
+  you Refuel or repair, since that is against the rules. Disabled by default.

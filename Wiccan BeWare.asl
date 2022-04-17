@@ -36,6 +36,17 @@ startup {
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""MarketSell"", ""MarketID"":\d+, ""Type"":"".*"", ""Type_Localised"":"".*"", ""Count"":\d+, ""SellPrice"":\d+, ""TotalSale"":\d+, ""AvgPricePaid"":\d+ \}"));
 
+    // Reset conditions
+    vars.resetConditions = new List<System.Text.RegularExpressions.Regex>();
+    vars.resetConditions.Add(
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Repair"", .*\}"));
+    vars.resetConditions.Add(
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""RepairAll"", ""Cost"":\d+ \}"));
+    vars.resetConditions.Add(
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""RefuelAll"", ""Cost"":\d+, ""Amount"":\d+\.\d+ \}"));
+    vars.resetConditions.Add(
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""RefuelPartial"", ""Cost"":\d+, ""Amount"":\d+\.\d+ \}"));
+
 	// Journal file handling
 	vars.journalPath = Path.Combine(
 		Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
@@ -64,6 +75,9 @@ startup {
 
 	// Initialize split counter
 	vars.currentSplit = 0;
+
+	// Initialize settings
+	settings.Add("autoReset", false, "Automatically reset when refuelling or repairing");
 }
 
 // Executes when LiveSplit detects the game process (see “state” at the top of the file).
@@ -106,6 +120,23 @@ split {
 	}
 
 	return split;
+}
+
+// Executes every `update`. Triggers a reset if a reset condition is met.
+// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#automatic-resets-1
+reset {
+	bool reset = false;
+
+	if (settings["autoReset"] && !String.IsNullOrEmpty(current.journalString)) {
+        foreach (System.Text.RegularExpressions.Regex condition in vars.resetConditions)
+        {
+            if (condition.Match(current.journalString).Success) {
+                reset = true;
+            }
+        }
+	}
+
+	return reset;
 }
 
 // Executes when the game process is shut down.
