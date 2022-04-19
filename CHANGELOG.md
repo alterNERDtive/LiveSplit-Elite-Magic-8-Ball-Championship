@@ -1,3 +1,9 @@
+# devel
+
+## Fixed
+
+* Wiccan BeWare: should now consistently detect buy/sell events.
+
 # 3.1 (2022-04-18)
 
 ## Added
