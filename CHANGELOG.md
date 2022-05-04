@@ -1,3 +1,11 @@
+# devel
+
+## Added
+
+* Support for race 4, On the Rocks
+
+-----
+
 # 3.1.1 (2022-04-19)
 
 ## Fixed

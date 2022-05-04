@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>Elite Dangerous</GameName>
+  <CategoryName>On the Rocks</CategoryName>
+  <LayoutPath>
+  </LayoutPath>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <Segments>
+    <Segment>
+      <Name>-Jump to first stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at first stop</Name>
+    </Segment>
+    <Segment>
+      <Name>{First stop}Sell at first stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to second stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at second stop</Name>
+    </Segment>
+    <Segment>
+      <Name>{Second stop}Sell at second stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to third stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at third stop</Name>
+    </Segment>
+    <Segment>
+      <Name>{Third stop}Sell at third stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to fourth stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at fourth stop</Name>
+    </Segment>
+    <Segment>
+      <Name>{Fourth stop}Sell at fourth stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to fifth stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at fifth stop</Name>
+    </Segment>
+    <Segment>
+      <Name>{Fifth stop}Sell at fifth stop</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Fullerene C60</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Rebuy Prospect</Name>
+    </Segment>
+    <Segment>
+      <Name>{Return to Rebuy Prospect}Dock at Rebuy Prospect</Name>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>

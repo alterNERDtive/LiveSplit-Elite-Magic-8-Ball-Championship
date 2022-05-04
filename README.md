@@ -80,3 +80,16 @@ There is one settings:
 
 * `Automatically reset when refuelling or repairing`: Automatically reset when
   you Refuel or repair, since that is against the rules. Disabled by default.
+
+### Race 4 – On the Rocks
+
+https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-on-the-rocks-7th-15th-may-3307-magic-8-ball-championship-race-4.602955/
+
+The AutoSplitter will start the timer once you undock from Rebuy Prospect. It
+will **not** enforce selling 1t of beer mats (split will trigger at selling
+_anything_), and **not** check if you’re buying water at Jack’s Town.
+
+Since the order in which you visit the race’s stops is up to you, the splits
+do not have a specific order and instead just list the `n`th stop.
+
+There are no settings.
