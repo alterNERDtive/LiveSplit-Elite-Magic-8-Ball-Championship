@@ -11,14 +11,14 @@ startup {
 	vars.journalEntries = new List<System.Text.RegularExpressions.Regex>(19);
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""Rebuy Prospect"", ""StationType"":"".*"", ""MarketID"":\d+(, ""Taxi"":(true|false), ""Multicrew"":(true|false))? \}"));
-	System.Linq.Enumerable.Repeat<Action>(() => {
+	for (int i=0; i<5; i++) {
 		vars.journalEntries.Add(
 			new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""(Andhrimi|Artemis|Felkan|Nu Tauri|Othime)"", ""SystemAddress"":\d+, .*\}"));
 		vars.journalEntries.Add(
 			new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""(Andhrimi|Artemis|Felkan|Nu Tauri|Othime)"", ""SystemAddress"":\d+, ""Body"":""(Big Pappa's Base|Freeholm|Jack's Town|Simbad's Refuge|Lone Rock)"", ""BodyID"":\d+, ""BodyType"":""Station"" \}"));
 		vars.journalEntries.Add(
 			new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""MarketSell"", ""MarketID"":\d+, ""Type"":"".*""(, ""Type_Localised"":"".*"")?, ""Count"":\d+, ""SellPrice"":\d+, ""TotalSale"":\d+, ""AvgPricePaid"":\d+ \}"));
-	}, 5);
+	}
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Fullerene C60"", ""SystemAddress"":4030566762835, .*\}"));
 	vars.journalEntries.Add(
@@ -107,23 +107,6 @@ split {
 	}
 
 	return split;
-}
-
-// Executes every `update`. Triggers a reset if a reset condition is met.
-// See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#automatic-resets-1
-reset {
-	bool reset = false;
-
-	if (settings["autoReset"] && !String.IsNullOrEmpty(current.journalString)) {
-        foreach (System.Text.RegularExpressions.Regex condition in vars.resetConditions)
-        {
-            if (condition.Match(current.journalString).Success) {
-                reset = true;
-            }
-        }
-	}
-
-	return reset;
 }
 
 // Executes when the game process is shut down.
