@@ -30,6 +30,47 @@ the collection? Just ask.
 
 ## Races
 
+### Race 4 – On the Rocks
+
+https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-on-the-rocks-7th-15th-may-3307-magic-8-ball-championship-race-4.602955/
+
+The AutoSplitter will start the timer once you undock from Rebuy Prospect. It
+will **not** enforce selling 1t of beer mats (split will trigger at selling
+_anything_), and **not** check if you’re buying water at Jack’s Town.
+
+Since the order in which you visit the race’s stops is up to you, the splits
+do not have a specific order and instead just list the `n`th stop.
+
+There are no settings.
+
+### Race 3 – Wiccan BeWare
+
+https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-wiccan-beware-race-magic-8-ball-championship-race-3.602128/
+
+The AutoSplitter will start the timer once you undock from Dublin Citadel. It
+will **not** enforce buying the correct cargo, and **not** check the system you
+buy it in. It can also not detect if/when you fly through the tunnel at Gateway
+Interchange Hub, nor enforce the speed requirement.
+
+There is one settings:
+
+* `Automatically reset when refuelling or repairing`: Automatically reset when
+  you Refuel or repair, since that is against the rules. Disabled by default.
+
+### Race 2 – The Aquarian Job
+
+https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-aquarian-job-magic-8-ball-championship-race-2.599829/
+
+The AutoSplitter will start the timer once you undock from London Relay. It will
+enforce doing all steps in the corret order. There is no sane way to check for
+the distance requirements around Cooper Arena; as long as you land/take off
+within ~50 km of the settlement, you will get a split.
+
+There is one settings:
+
+* `Automatically reset when refuelling or repairing`: Automatically reset when
+  you Refuel or repair, since that is against the rules. Disabled by default.
+
 ### Race 1 – Back to Pareco
 
 https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-back-to-pareco-magic-8-ball-championship-race-1.598760/
@@ -52,44 +93,3 @@ There are two settings:
 **Note**: If your _next stop is Garden Ring_ when the time limit is reached,
 you will either have to reset LiveSplit manually after docking there or re-dock
 to have the AutoSplitter reset it for you.
-
-### Race 2 – The Aquarian Job
-
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-aquarian-job-magic-8-ball-championship-race-2.599829/
-
-The AutoSplitter will start the timer once you undock from London Relay. It will
-enforce doing all steps in the corret order. There is no sane way to check for
-the distance requirements around Cooper Arena; as long as you land/take off
-within ~50 km of the settlement, you will get a split.
-
-There is one settings:
-
-* `Automatically reset when refuelling or repairing`: Automatically reset when
-  you Refuel or repair, since that is against the rules. Disabled by default.
-
-### Race 3 – Wiccan BeWare
-
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-wiccan-beware-race-magic-8-ball-championship-race-3.602128/
-
-The AutoSplitter will start the timer once you undock from Dublin Citadel. It
-will **not** enforce buying the correct cargo, and **not** check the system you
-buy it in. It can also not detect if/when you fly through the tunnel at Gateway
-Interchange Hub, nor enforce the speed requirement.
-
-There is one settings:
-
-* `Automatically reset when refuelling or repairing`: Automatically reset when
-  you Refuel or repair, since that is against the rules. Disabled by default.
-
-### Race 4 – On the Rocks
-
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-on-the-rocks-7th-15th-may-3307-magic-8-ball-championship-race-4.602955/
-
-The AutoSplitter will start the timer once you undock from Rebuy Prospect. It
-will **not** enforce selling 1t of beer mats (split will trigger at selling
-_anything_), and **not** check if you’re buying water at Jack’s Town.
-
-Since the order in which you visit the race’s stops is up to you, the splits
-do not have a specific order and instead just list the `n`th stop.
-
-There are no settings.
