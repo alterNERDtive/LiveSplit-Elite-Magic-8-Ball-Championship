@@ -8,7 +8,7 @@ state("EliteDangerous64") {}
 startup {
 	// Relevant journal entries
 	vars.journalReader = null;
-	vars.journalEntries = new List<System.Text.RegularExpressions.Regex>(9);
+	vars.journalEntries = new List<System.Text.RegularExpressions.Regex>(13);
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""Dublin Citadel"", ""StationType"":"".*"", ""MarketID"":\d+(, ""Taxi"":(true|false), ""Multicrew"":(true|false))? \}"));
 	vars.journalEntries.Add(
@@ -37,7 +37,7 @@ startup {
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""MarketSell"", ""MarketID"":\d+, ""Type"":"".*""(, ""Type_Localised"":"".*"")?, ""Count"":\d+, ""SellPrice"":\d+, ""TotalSale"":\d+, ""AvgPricePaid"":\d+ \}"));
 
     // Reset conditions
-    vars.resetConditions = new List<System.Text.RegularExpressions.Regex>();
+    vars.resetConditions = new List<System.Text.RegularExpressions.Regex>(4);
     vars.resetConditions.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Repair"", .*\}"));
     vars.resetConditions.Add(

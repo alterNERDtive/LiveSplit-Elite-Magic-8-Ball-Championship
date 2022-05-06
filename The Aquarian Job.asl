@@ -8,7 +8,7 @@ state("EliteDangerous64") {}
 startup {
 	// Relevant journal entries
 	vars.journalReader = null;
-	vars.journalEntries = new List<System.Text.RegularExpressions.Regex>(9);
+	vars.journalEntries = new List<System.Text.RegularExpressions.Regex>(12);
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""London Relay"", ""StationType"":"".*"", ""MarketID"":\d+(, ""Taxi"":(true|false), ""Multicrew"":(true|false))? \}"));
 	vars.journalEntries.Add(
