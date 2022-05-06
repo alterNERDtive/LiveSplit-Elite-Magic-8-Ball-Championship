@@ -32,13 +32,11 @@
 
 ## Changed
 
-* Splits for Race 2 (The Aquarian Job) now include the SC drop timing at all
-  stops.
+* Splits for Race 2 (The Aquarian Job) now include the SC drop timing at all stops.
 
 ## Fixed
 
-* Auto splitters can now cope with the new file name format for journal files
-  introduced for Odyssey patch 11. (#6)
+* Auto splitters can now cope with the new file name format for journal files introduced for Odyssey patch 11. (#6)
 
 -----
 
@@ -50,9 +48,7 @@
 
 ## Fixed
 
-* No longer freezes for 15s on `init`. Instead watches the journal folder for
-  new journal files and loads the latest one automatically. Should fix some
-  edge cases too. (#5)
+* No longer freezes for 15s on `init`. Instead watches the journal folder for new journal files and loads the latest one automatically. Should fix some edge cases too. (#5)
 
 -----
 
@@ -65,8 +61,7 @@ AutoSplitter). You can keep your personal splits.
 
 ## Added
 
-* `Automatically stop the timer after death` option: stops the timer should you
-  meet an untimely demise. Disabled by default. (#4)
+* `Automatically stop the timer after death` option: stops the timer should you meet an untimely demise. Disabled by default. (#4)
 
 ## Changed
 
@@ -75,8 +70,7 @@ AutoSplitter). You can keep your personal splits.
 
 ## Fixed
 
-* The layout now forces timing mode to game time. On real time the hack to stop
-  the timer after the first dock past the time limit does not work. (#2)
+* The layout now forces timing mode to game time. On real time the hack to stop the timer after the first dock past the time limit does not work. (#2)
 * Now works with Odyssey’s `Docked`/`Undocked` events. (#1)
 
 -----
