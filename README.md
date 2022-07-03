@@ -6,6 +6,9 @@ Don’t know what [“LiveSplit”](https://livesplit.org) is? It allows you to 
 
 You are organizing one of the Magic 8-Ball races and want yours to be added to the collection? Just ask.
 
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/alterNERDtive?style=for-the-badge)](https://github.com/sponsors/alterNERDtive)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S1DLYBS)
+
 ## Setup
 
 1. Download LiveSplit from https://livesplit.org/downloads/ and unzip it to a directory of your choosing.
