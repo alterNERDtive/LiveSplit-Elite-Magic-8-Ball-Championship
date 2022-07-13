@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>Elite Dangerous</GameName>
+  <CategoryName>Chicken Run: Crash Harder</CategoryName>
+  <LayoutPath>
+  </LayoutPath>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <Segments>
+    <Segment>
+      <Name>-Jump to Bento</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Snow Moon</Name>
+    </Segment>
+    <Segment>
+      <Name>Dock at Snow Moon</Name>
+    </Segment>
+    <Segment>
+      <Name>{Bento}Buy Crystalline Spheres</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Okinura</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Korniyenko Terminal</Name>
+    </Segment>
+    <Segment>
+      <Name>{Okinura}Dock at Korniyenko Terminal</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Blatrimpe</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Koch Beacon</Name>
+    </Segment>
+    <Segment>
+      <Name>{Blatrimpe}Dock at Koch Beacon</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Shoujeman</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Baffin Plant</Name>
+    </Segment>
+    <Segment>
+      <Name>{Shoujeman}Dock at Baffin Plant</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Wolf 562</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at King’s Inheritance</Name>
+    </Segment>
+    <Segment>
+      <Name>{Wolf 562}Dock at King’s Inheritance</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to 5 G. Capricorni</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Moore Beacon</Name>
+    </Segment>
+    <Segment>
+      <Name>{5 G. Capricorni}Dock at Moore Beacon</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to Ross 905</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Weber Legacy</Name>
+    </Segment>
+    <Segment>
+      <Name>{Ross 905}Dock at Weber Legacy</Name>
+    </Segment>
+    <Segment>
+      <Name>-Jump to LTT 2151</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Noriega Station</Name>
+    </Segment>
+    <Segment>
+      <Name>{LTT 2151}Dock at Noriega Station</Name>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>

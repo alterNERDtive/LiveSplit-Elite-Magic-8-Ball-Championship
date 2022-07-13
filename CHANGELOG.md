@@ -1,3 +1,11 @@
+# devel
+
+## Added
+
+* Support for race 6, Chicken Run: Crash Harder.
+
+-----
+
 # 4.0 (2022-05-07)
 
 ## Added
@@ -11,6 +19,8 @@
 ## Fixed
 
 * Wiccan BeWare: should now consistently detect buy/sell events.
+
+-----
 
 # 3.1 (2022-04-18)
 
