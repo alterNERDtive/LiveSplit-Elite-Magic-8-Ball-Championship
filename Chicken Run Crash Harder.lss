@@ -32,7 +32,7 @@
       <Name>-Jump to Okinura</Name>
     </Segment>
     <Segment>
-      <Name>-Drop at Korniyenko Terminal</Name>
+      <Name>-Drop at Okinura 8 C</Name>
     </Segment>
     <Segment>
       <Name>{Okinura}Dock at Korniyenko Terminal</Name>
@@ -41,7 +41,7 @@
       <Name>-Jump to Blatrimpe</Name>
     </Segment>
     <Segment>
-      <Name>-Drop at Koch Beacon</Name>
+      <Name>-Drop at Blatrimpe 7</Name>
     </Segment>
     <Segment>
       <Name>{Blatrimpe}Dock at Koch Beacon</Name>
@@ -50,7 +50,7 @@
       <Name>-Jump to Shoujeman</Name>
     </Segment>
     <Segment>
-      <Name>-Drop at Baffin Plant</Name>
+      <Name>-Drop at Shoujeman 5</Name>
     </Segment>
     <Segment>
       <Name>{Shoujeman}Dock at Baffin Plant</Name>
@@ -59,7 +59,7 @@
       <Name>-Jump to Wolf 562</Name>
     </Segment>
     <Segment>
-      <Name>-Drop at King’s Inheritance</Name>
+      <Name>-Drop at Laila’s Memory/Name>
     </Segment>
     <Segment>
       <Name>{Wolf 562}Dock at King’s Inheritance</Name>
@@ -68,7 +68,7 @@
       <Name>-Jump to 5 G. Capricorni</Name>
     </Segment>
     <Segment>
-      <Name>-Drop at Moore Beacon</Name>
+      <Name>-Drop at 5 G. Capricorni 3</Name>
     </Segment>
     <Segment>
       <Name>{5 G. Capricorni}Dock at Moore Beacon</Name>
@@ -77,7 +77,7 @@
       <Name>-Jump to Ross 905</Name>
     </Segment>
     <Segment>
-      <Name>-Drop at Weber Legacy</Name>
+      <Name>-Drop at Robert Kelley</Name>
     </Segment>
     <Segment>
       <Name>{Ross 905}Dock at Weber Legacy</Name>
