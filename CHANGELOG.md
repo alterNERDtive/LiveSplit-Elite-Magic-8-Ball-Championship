@@ -1,3 +1,11 @@
+# devel
+
+## Fixed
+
+* Typo in Chicken Run splits file.
+
+-----
+
 # 5.0 (2022-07-23)
 
 ## Added
