@@ -8,7 +8,7 @@ state("EliteDangerous64") {}
 startup {
 	// Relevant journal entries
 	vars.journalReader = null;
-	vars.journalEntries = new List<System.Text.RegularExpressions.Regex>(19);
+	vars.journalEntries = new List<System.Text.RegularExpressions.Regex>(26);
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Undocked"", ""StationName"":""Noriega Station"", ""StationType"":""Coriolis"", ""MarketID"":3228508416(, ""Taxi"":(true|false), ""Multicrew"":(true|false))? \}"));
 	vars.journalEntries.Add(
@@ -16,7 +16,7 @@ startup {
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Bento"", ""SystemAddress"":633675420370, ""Body"":""Snow Moon"", ""BodyID"":5, ""BodyType"":""Station"" \}"));
 	vars.journalEntries.Add(
-		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""Snow Moon"", ""StationType"":""Coriolis""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Bento"", .*\}"));
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""Snow Moon"", ""StationType"":""Orbis""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Bento"", .*\}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""MarketBuy"", ""MarketID"":128059402, ""Type"":""crystallinespheres""(, ""Type_Localised"":""Crystalline Spheres"")?, ""Count"":\d+, ""BuyPrice"":\d+, ""TotalCost"":\d+ \}"));
 	vars.journalEntries.Add(
@@ -40,19 +40,19 @@ startup {
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Wolf 562"", ""SystemAddress"":670954497457, .*\}"));
 	vars.journalEntries.Add(
-		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""Wolf 562"":""Shoujeman"", ""SystemAddress"":670954497457, ""Body"":""Laila's Memory"", ""BodyID"":3, ""BodyType"":""Planet"" \}"));
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Wolf 562"", ""SystemAddress"":670954497457, ""Body"":""Laila's Memory"", ""BodyID"":3, ""BodyType"":""Planet"" \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""King's Inheritance"", ""StationType"":""CraterPort""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Wolf 562"", .*\}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""5 G. Capricorni"", ""SystemAddress"":1733119972058, .*\}"));
 	vars.journalEntries.Add(
-		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""5 G. Capricorni"":""Shoujeman"", ""SystemAddress"":1733119972058, ""Body"":""5 G. Capricorni 3"", ""BodyID"":9, ""BodyType"":""Planet"" \}"));
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""5 G. Capricorni"", ""SystemAddress"":1733119972058, ""Body"":""5 G. Capricorni 3"", ""BodyID"":9, ""BodyType"":""Planet"" \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""Moore Beacon"", ""StationType"":""CraterOutpost""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""5 G. Capricorni"", .*\}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""FSDJump""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Ross 905"", ""SystemAddress"":11666070840737, .*\}"));
 	vars.journalEntries.Add(
-		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""Ross 905"":""Shoujeman"", ""SystemAddress"":11666070840737, ""Body"":""Robert Kelley"", ""BodyID"":6, ""BodyType"":""Planet"" \}"));
+		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""SupercruiseExit""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Ross 905"", ""SystemAddress"":11666070840737, ""Body"":""Robert Kelley"", ""BodyID"":6, ""BodyType"":""Planet"" \}"));
 	vars.journalEntries.Add(
 		new System.Text.RegularExpressions.Regex(@"\{ ""timestamp"":""(?<timestamp>.*)"", ""event"":""Docked"", ""StationName"":""Weber Legacy"", ""StationType"":""CraterOutpost""(, ""Taxi"":(true|false), ""Multicrew"":(true|false))?, ""StarSystem"":""Ross 905"", .*\}"));
 	vars.journalEntries.Add(
