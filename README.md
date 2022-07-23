@@ -22,6 +22,14 @@ You are organizing one of the Magic 8-Ball races and want yours to be added to t
 
 ## Races
 
+### Race 6 – Chicken Run: Crash Harder
+
+https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-chicken-run-crash-harder-magic-8-ball-championship-race-6.605441/
+
+The AutSplitter will start the timer once you undock from Noriega Station. it will **not** account for ending the race prematurely and returning to LTT 2151 before visiting _all_ other stops.
+
+There are no settings.
+
 ### Race 4 – On the Rocks
 
 https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-on-the-rocks-7th-15th-may-3307-magic-8-ball-championship-race-4.602955/
