@@ -1,6 +1,6 @@
 # LiveSplit files for the Magic 8-Ball Championship
 
-LiveSplit files and AutoSplitters for the Magic 8-Ball Championship organized by the Buckyball Racing Club: https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-magic-8-ball-championship.596981/
+LiveSplit files and AutoSplitters for the Magic 8-Ball Championship organized by the Buckyball Racing Club: <https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-magic-8-ball-championship.596981/>
 
 Don’t know what [“LiveSplit”](https://livesplit.org) is? It allows you to time speedruns of your favourite games!
 
@@ -11,7 +11,7 @@ You are organizing one of the Magic 8-Ball races and want yours to be added to t
 
 ## Setup
 
-1. Download LiveSplit from https://livesplit.org/downloads/ and unzip it to a directory of your choosing.
+1. Download LiveSplit from <https://livesplit.org/downloads/> and unzip it to a directory of your choosing.
 2. Download this repository (green button in the top right of the repostory view → “Download ZIP”) and extract it to a directory of your choosing. Alternatively, clone the git repository.
 3. Launch LiveSplit and do the following:
    - Right click, Open Splits, select `[name of the race].lss`.
@@ -22,17 +22,29 @@ You are organizing one of the Magic 8-Ball races and want yours to be added to t
 
 ## Races
 
+### Race 7 – Mischief Mile
+
+<https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-mischief-mile-rebooted-magic-8-ball-championship-race-7.606269/>
+
+The AutoSplitter will start the timer once you undock from Hooke Hub _or_ Ocampo Station.
+
+It will not enforce an order to the waypoints; this also means that if you e.g. jump into NLTT 48288 twice, it will spli twice. It will not acconut for any of the extra rules of the race, e.g. it will not reset if you fuel scoop or detect the Snickers bonus stuff.
+
+As the race has no set order for the systems to be visited in, you will have to edit the splits to reorder the systems for your personal route. You can do that from the LiveSplit UI, but I would recommend editing the splits file directly in the text editor of your choosing. It contains comments to help with that task. If you are planning to fly the “default” order it comes with you will not have to edit anything.
+
+There are no settings.
+
 ### Race 6 – Chicken Run: Crash Harder
 
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-chicken-run-crash-harder-magic-8-ball-championship-race-6.605441/
+<https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-chicken-run-crash-harder-magic-8-ball-championship-race-6.605441/>
 
-The AutSplitter will start the timer once you undock from Noriega Station. it will **not** account for ending the race prematurely and returning to LTT 2151 before visiting _all_ other stops.
+The AutoSplitter will start the timer once you undock from Noriega Station. it will **not** account for ending the race prematurely and returning to LTT 2151 before visiting _all_ other stops.
 
 There are no settings.
 
 ### Race 4 – On the Rocks
 
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-on-the-rocks-7th-15th-may-3307-magic-8-ball-championship-race-4.602955/
+<https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-on-the-rocks-7th-15th-may-3307-magic-8-ball-championship-race-4.602955/>
 
 The AutoSplitter will start the timer once you undock from Rebuy Prospect. It will **not** enforce selling 1t of beer mats (split will trigger at selling _anything_), and **not** check if you’re buying water at Jack’s Town.
 
@@ -42,34 +54,34 @@ There are no settings.
 
 ### Race 3 – Wiccan BeWare
 
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-wiccan-beware-race-magic-8-ball-championship-race-3.602128/
+<https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-wiccan-beware-race-magic-8-ball-championship-race-3.602128/>
 
 The AutoSplitter will start the timer once you undock from Dublin Citadel. It will **not** enforce buying the correct cargo, and **not** check the system you buy it in. It can also not detect if/when you fly through the tunnel at Gateway Interchange Hub, nor enforce the speed requirement.
 
 There is one settings:
 
-* `Automatically reset when refuelling or repairing`: Automatically reset when you Refuel or repair, since that is against the rules. Disabled by default.
+- `Automatically reset when refuelling or repairing`: Automatically reset when you Refuel or repair, since that is against the rules. Disabled by default.
 
 ### Race 2 – The Aquarian Job
 
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-aquarian-job-magic-8-ball-championship-race-2.599829/
+<https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-the-aquarian-job-magic-8-ball-championship-race-2.599829/>
 
 The AutoSplitter will start the timer once you undock from London Relay. It will enforce doing all steps in the corret order. There is no sane way to check for the distance requirements around Cooper Arena; as long as you land/take off within ~50 km of the settlement, you will get a split.
 
 There is one settings:
 
-* `Automatically reset when refuelling or repairing`: Automatically reset when you Refuel or repair, since that is against the rules. Disabled by default.
+- `Automatically reset when refuelling or repairing`: Automatically reset when you Refuel or repair, since that is against the rules. Disabled by default.
 
 ### Race 1 – Back to Pareco
 
-https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-back-to-pareco-magic-8-ball-championship-race-1.598760/
+<https://forums.frontier.co.uk/threads/the-buckyball-racing-club-presents-back-to-pareco-magic-8-ball-championship-race-1.598760/>
 
 The AutoSplitter will start the timer once you undock from Garden Ring. It will enforce docking at the race’s stations in the correct order. After 20 minutes you get one last stop, then the timer will pause and reset once you dock back at Garden Ring.
 
 There are three settings:
 
-* `Write the number of stops to a file, e.g. for a stream overlay`: Does exactly that. You can find the file in `My Documents`, the full path will be in the tooltip. Disabled by default.
-* `Automatically reset when docking back at Garden Ring`: Automatically reset when you have finished a run and dock back at Garden Ring. Enabled by default.
-* `Automatically stop the timer after death`: Automatically stop the timer should you meet an untimely demise. Disabled by default.
+- `Write the number of stops to a file, e.g. for a stream overlay`: Does exactly that. You can find the file in `My Documents`, the full path will be in the tooltip. Disabled by default.
+- `Automatically reset when docking back at Garden Ring`: Automatically reset when you have finished a run and dock back at Garden Ring. Enabled by default.
+- `Automatically stop the timer after death`: Automatically stop the timer should you meet an untimely demise. Disabled by default.
 
 **Note**: If your _next stop is Garden Ring_ when the time limit is reached, you will either have to reset LiveSplit manually after docking there or re-dock to have the AutoSplitter reset it for you.

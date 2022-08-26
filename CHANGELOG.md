@@ -1,3 +1,9 @@
+# 6.0 (2022-08-26)
+
+* Support for race 7, Mischief Mile.
+
+-----
+
 # 5.0.1 (2022-07-03)
 
 ## Fixed

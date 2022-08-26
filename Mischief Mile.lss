@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>Elite Dangerous</GameName>
+  <CategoryName>Mischief Mile</CategoryName>
+  <LayoutPath>
+  </LayoutPath>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <Segments>
+    <!-- start waypoints -->
+    <!-- move those around to your liking (keep the sections from each “start XXX” to “end XXX” comment together) -->
+
+    <!-- start NLTT 48288 -->
+    <Segment>
+      <Name>NLTT 48288</Name>
+    </Segment>
+    <!-- end NLTT 48288 -->
+
+    <!-- start LHS 3719 -->
+    <Segment>
+      <Name>LHS 3719</Name>
+    </Segment>
+    <!-- end LHS 3719 -->
+
+    <!-- start Fuelum -->
+    <Segment>
+      <Name>-Jump to Fuelum</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Wollheim Vision</Name>
+    </Segment>
+    <Segment>
+      <Name>{Fuelum}Dock at Wollheim Vision</Name>
+    </Segment>
+    <!-- end Fuelum -->
+
+    <!-- end waypoints -->
+
+    <!-- start target station -->
+    <!-- if you fly from Mirateje to Tepech instead of the other way around, you will have to delete the entire Mirateje section (from the “start Mirateje” line to the “end Mirateje” line) and remove the “start Tepech” and “end Tepech” comment lines -->
+
+    <!-- start Mirateje -->
+    <Segment>
+      <Name>-Jump to Mirateje</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Ocampo Station</Name>
+    </Segment>
+    <Segment>
+      <Name>{Mirateje}Dock at Ocampo Station</Name>
+    </Segment>
+    <!-- end Mirateje -->
+
+    <!-- start Tepech
+    <Segment>
+      <Name>-Jump to Tepech</Name>
+    </Segment>
+    <Segment>
+      <Name>-Drop at Hooke Hub</Name>
+    </Segment>
+    <Segment>
+      <Name>{Tepech}Dock at Hooke Hub</Name>
+    </Segment>
+    end Tepech -->
+
+    <!-- end target station -->
+  </Segments>
+  <AutoSplitterSettings />
+</Run>
