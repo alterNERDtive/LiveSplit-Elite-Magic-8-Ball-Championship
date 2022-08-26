@@ -72,6 +72,8 @@ startup {
 // We also need to check if file logging is enabled (the setting is not available in `startup`) and create/open our log file.
 // See https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/README.md#script-initialization-game-start
 init {
+	vars.updateJournalReader();
+	vars.journalReader.ReadToEnd();
 }
 
 // Executes as long as the game process is running, by default 60 times per second.

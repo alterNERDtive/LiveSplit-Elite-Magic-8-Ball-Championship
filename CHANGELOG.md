@@ -1,6 +1,12 @@
 # 6.0 (2022-08-26)
 
+# Added
+
 * Support for race 7, Mischief Mile.
+
+# Fixed
+
+* Now correctly loads the next journal file after restarting the game.
 
 -----
 
