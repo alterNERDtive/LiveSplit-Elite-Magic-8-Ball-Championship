@@ -28,7 +28,7 @@ You are organizing one of the Magic 8-Ball races and want yours to be added to t
 
 The AutoSplitter will start the timer once you undock from Hooke Hub _or_ Ocampo Station.
 
-It will not enforce an order to the waypoints; this also means that if you e.g. jump into NLTT 48288 twice, it will spli twice. It will not acconut for any of the extra rules of the race, e.g. it will not reset if you fuel scoop or detect the Snickers bonus stuff.
+It will not enforce an order to the waypoints; this also means that if you e.g. jump into NLTT 48288 twice, it will split twice. It will not account for any of the extra rules of the race, e.g. it will not reset if you fuel scoop and it will not detect the Snickers bonus stuff.
 
 As the race has no set order for the systems to be visited in, you will have to edit the splits to reorder the systems for your personal route. You can do that from the LiveSplit UI, but I would recommend editing the splits file directly in the text editor of your choosing. It contains comments to help with that task. If you are planning to fly the “default” order it comes with you will not have to edit anything.
 
